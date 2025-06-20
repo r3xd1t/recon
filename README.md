@@ -5,30 +5,30 @@ Offensive reconnaissance tool for penetration testers
 ✨ Features
 Passive Reconnaissance
 
-    WHOIS Lookup - Retrieve domain registration information
+ WHOIS Lookup - Retrieve domain registration information
 
-    DNS Enumeration - Fetch A, MX, TXT, NS records
+ NS Enumeration - Fetch A, MX, TXT, NS records
 
-    Subdomain Enumeration - Discover subdomains using crt.sh API
+ Subdomain Enumeration - Discover subdomains using crt.sh API
 
 Active Scanning
 
-    Port Scanning - Nmap-based TCP/SYN scans
+ Port Scanning - Nmap-based TCP/SYN scans
 
-    Banner Grabbing - Service version detection
+ Banner Grabbing - Service version detection
 
-    Technology Detection - Identify web frameworks and CMS
+ Technology Detection - Identify web frameworks and CMS
 
 Reporting
 
-    HTML Reports - Professional visual format
+ HTML Reports - Professional visual format
 
-    Text Reports - Lightweight output
+ Text Reports - Lightweight output
 
-    Terminal Output - Real-time colored results
+ Terminal Output - Real-time colored results
 
 🛠 Installation
-Requirements
+    Requirements
 
     Python 3.10+
 
@@ -37,30 +37,30 @@ Requirements
     Kali Linux (recommended)
 
 Setup
-bash
+ bash
 
 # Clone repository
-git clone https://github.com/yourusername/ReconPulse.git
-cd ReconPulse
+  git clone https://github.com/yourusername/ReconPulse.git
+  cd ReconPulse
 
 # Create virtual environment
-python3 -m venv venv
-source venv/bin/activate
+  python3 -m venv venv
+  source venv/bin/activate
 
 # Install dependencies
-pip install -r requirements.txt
+  pip install -r requirements.txt
 
 # Set permissions
-chmod +x reconpulse.py
+ chmod +x reconpulse.py
 
 Post-Install
 bash
 
 # Enable privileged scanning
-sudo setcap cap_net_raw,cap_net_admin,cap_net_bind_service+eip /usr/bin/nmap
+ sudo setcap cap_net_raw,cap_net_admin,cap_net_bind_service+eip /usr/bin/nmap
 
 # Verify installation
-./reconpulse.py --help
+ ./reconpulse.py --help
 
 🚀 Usage
 Basic Scan
@@ -71,28 +71,28 @@ python reconpulse.py example.com --whois --dns
 Full Reconnaissance
 bash
 
-sudo python reconpulse.py example.com --all -o html
+ sudo python reconpulse.py example.com --all -o html
 
 Module-Based Scanning
 bash
 
 # Subdomain discovery
-python reconpulse.py example.com --subdomains -v
+ python reconpulse.py example.com --subdomains -v
 
 # Port scanning only
-sudo python reconpulse.py example.com --portscan
+ sudo python reconpulse.py example.com --portscan
 
 # Technology detection
-python reconpulse.py example.com --tech -o txt
+ python reconpulse.py example.com --tech -o txt
 
 🧩 Modules
-Passive Reconnaissance
-Module	Command	Description
-WHOIS	--whois	Retrieves domain registration details
-DNS Enum	--dns	Gets A, MX, TXT, NS records
-Subdomains	--subdomains	Discovers subdomains via crt.sh
-Active Scanning
-Module	Command	Description
-Port Scan	--portscan	Scans open ports (requires sudo)
-Banner Grab	--banner	Retrieves service banners
-Tech Detect	--tech	Identifies web technologies
+ Passive Reconnaissance
+ Module	Command	Description
+ WHOIS	--whois	Retrieves domain registration details
+ DNS Enum	--dns	Gets A, MX, TXT, NS records
+ Subdomains	--subdomains	Discovers subdomains via crt.sh
+ Active Scanning
+ Module	Command	Description
+ Port Scan	--portscan	Scans open ports (requires sudo)
+ Banner Grab	--banner	Retrieves service banners
+ Tech Detect	--tech	Identifies web technologies
