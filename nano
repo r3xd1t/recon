@@ -1,0 +1,18 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+recon-env/
+
+# Reports
+*.html
+*.txt
+
+# API keys
+*.env
+api_keys.*
+
+# System files
+.DS_Store
